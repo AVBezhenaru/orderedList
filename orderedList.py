@@ -99,6 +99,9 @@ class OrderedList:
         return None
 
     def delete(self, val):
+        if self.head == None:
+            return None
+
         node = self.head
 
         if self.head.value == val:
