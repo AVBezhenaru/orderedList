@@ -151,17 +151,18 @@ class OrderedList:
         return r
 
 class OrderedStringList(OrderedList):
-    def __init__(self, asc):
-        self.head = None
-        self.tail = None
-        self.__ascending = asc
 
     def compare(self, v1, v2):
-        if v1.strip() == v2.strip():
+        v1 = v1.strip()
+        v2 = v2.strip()
+
+        if v1 == v2:
             return 0
 
-        elif v1.strip() < v2.strip():
+        elif v1 < v2:
             return -1
 
-        elif v1.strip() > v2.strip():
+        elif v1 > v2:
             return +1
+
+
